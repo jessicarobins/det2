@@ -36,11 +36,7 @@ if (ENV === 'development') {
  */
 expressConfig(app);
 
-/*
- * REMOVE if you do not need any routes
- *
- * Note: Some of these routes have passport and database model dependencies
- */
+
 routesConfig(app);
 
 /*
