@@ -82,4 +82,4 @@ CreateListForm.propTypes = {
   toggleAddWarning: PropTypes.func.isRequired,
 };
 
-export default PostCreateWidget;
+export default CreateListForm;

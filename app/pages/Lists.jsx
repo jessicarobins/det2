@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import Page from 'pages/Page';
-// import VoteContainer from 'containers/Lists';
+import ListsContainer from 'containers/Lists';
 
 class Lists extends Component {
   render() {
     return (
       <Page {...this.getMetaData()}>
+        <ListsContainer {...this.props} />
       </Page>
     );
   }
