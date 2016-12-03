@@ -5,12 +5,13 @@ function ListList(props) {
   return (
     <div>
       {
-        props.lists.map(list => (
+        props.lists.length ?
+        (props.lists.map(list => (
           <List
             list={list}
             key={list._id}
           />
-        ))
+        ))) : <p>No lists</p>
       }
     </div>
   );

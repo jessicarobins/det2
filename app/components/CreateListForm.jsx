@@ -48,17 +48,9 @@ export class CreateListForm extends Component {
             {'I want to '}
             <input ref={this.verbRef} type="text" placeholder="climb" />
             {' every '}
-            <input
-              ref="typeahead"
-              options={this.props.templates}
-              placeholder={'mountain'}
-              labelKey={'name'}
-              allowNew={true}
-              newSelectionPrefix={''}
-              onInputChange={selected => this.setState({selected})}
-            />
+            <input ref={this.nounRef} type="text" placeholder="mountain" />
             {' '}
-            <button onClick={this.addPost}>
+            <button onClick={this.addList}>
               Submit
             </button>
             
@@ -74,7 +66,6 @@ export class CreateListForm extends Component {
 
 CreateListForm.propTypes = {
   addPost: PropTypes.func.isRequired,
-  showAddPost: PropTypes.bool.isRequired,
   templates: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired
   })).isRequired,
